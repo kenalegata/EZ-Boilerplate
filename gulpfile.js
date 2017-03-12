@@ -28,6 +28,11 @@ gulp.task('sass:production', function () {
    .pipe(gulp.dest('./build'));
 });
 
+gulp.task('copy', function () {
+  return gulp.src('app/assets/images')
+    .pipe(gulp.dest('build/assets/images'));
+});
+
 gulp.task('serve', ['nunjucks', 'sass:dev'], function() {
 
     browserSync.init({
@@ -36,4 +41,5 @@ gulp.task('serve', ['nunjucks', 'sass:dev'], function() {
 
     gulp.watch("./app/assets/sass/*.scss", ['sass:dev']);
     gulp.watch("./app/**/*.nunjucks", ['nunjucks']);  
+    gulp.watch("./app/assets/images/**/*.{jpg, gif, jpeg, png, svg}", ['nunjucks']);  
 });
