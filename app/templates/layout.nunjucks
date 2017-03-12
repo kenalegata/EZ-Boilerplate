@@ -6,14 +6,14 @@
 
         <meta name="description">
 
-        <title>EZ Boilerplate</title>
+        <title></title>
 
         <link rel="icon" href="/favicon.ico" type="image/icon">
         <link rel="shortcut icon" href="/favicon.ico" type="image/icon">
 
-        <link ref="stylesheet" href="css/main.css">
+        <link ref="stylesheet" href="assets/main.css">
     </head>
     <body>
-
+        {% block content %} {% endblock %}
     </body>
 </html>
